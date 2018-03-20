@@ -1,0 +1,53 @@
+nbDelignes
+
+nbDarrets
+nom
+dureeArret
+pos.x pos.y
+nom
+dureeArret
+pos.x pos.y
+
+nbDeTram
+numtram
+vitesseMax
+vitesse
+distanceMiniTram
+tempsRestantArret
+distanceArret
+sensDeplacement
+nomDuProchainArret
+numtram
+vitesseMax
+vitesse
+distanceMiniTram
+tempsRestantArret
+distanceArret
+sensDeplacement
+nomDuProchainArret
+
+nbDarrets
+nom
+dureeArret
+pos.x pos.y
+nom
+dureeArret
+pos.x pos.y
+
+nbDeTram
+numtram
+vitesseMax
+vitesse
+distanceMiniTram
+tempsRestantArret
+distanceArret
+sensDeplacement
+nomDuProchainArret
+numtram
+vitesseMax
+vitesse
+distanceMiniTram
+tempsRestantArret
+distanceArret
+sensDeplacement
+nomDuProchainArret
