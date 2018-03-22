@@ -20,11 +20,10 @@ listeTramways::listeTramways(const listeTramways & liste):d_tete{nullptr}
         c1=n;
         c2=c2->suiv;
 
-        while(c2!=0)
+        while()
         {
             n= new tramway(c2);
             c1->suiv=n;
-            c1=n;
             c2=c2->suiv;
         }
     }
@@ -32,5 +31,11 @@ listeTramways::listeTramways(const listeTramways & liste):d_tete{nullptr}
 
 listeTramways::~listeTramways()
 {
-    //dtor
+    tramways *t= d_tete;
+    while(t!=0)
+    {
+        d_tete=t->suiv;
+        delete t
+        t=d_tete;
+    }
 }
