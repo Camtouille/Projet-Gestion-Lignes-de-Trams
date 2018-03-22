@@ -7,6 +7,7 @@ class tramway
     friend class listeTramways;
     public:
         tramway(int num, ligne* li, double vitMax, bool vit, double distTram, double tArret, double distArret, bool sens, arret* arretSuivant);
+        pos GetPosition() const;
     private:
         int d_numeroTram;
 		ligne *d_ligne; ///ligne sur laquelle roule le tramway
