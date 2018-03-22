@@ -24,8 +24,8 @@ listeTramways::listeTramways(const listeTramways & liste):d_tete{nullptr}
         {
             n= new tramway(c2);
             c1->suiv=n;
-            c2=c2->suiv;
             c1=n;
+            c2=c2->suiv;
         }
     }
 }
@@ -41,9 +41,9 @@ listeTramways::~listeTramways()
     }
 }
 
-void listeTramways::ajouter(int numTram, ligne* li, double vitesseMax, bool vitesse, double distanceMiniTram, double tempsArret, double distanceArret, bool sensDeplacement, arret *arretSuivant);
+void listeTramways::ajouter(int numTram, ligne* li, double vitesseMax, bool vitesse, double distanceMiniTram, double tempsArret, double distanceArret, bool sensDeplacement, arret *arretSuivant, arret *arretPrecedent);
 {
-    tramway *n= new tramway(numTram,li,vitessMax,vitesse,distanceMiniTram,tempsArrets,distanceArret,sensDeplacement,arretSuivant);
+    tramway *n= new tramway(numTram,li,vitessMax,vitesse,distanceMiniTram,tempsArrets,distanceArret,sensDeplacement,arretSuivant,arretPrecedent);
     if(d_tete=nullptr)
     {
         d_tete=n;
@@ -64,6 +64,34 @@ void listeTramways::ajouter(int numTram, ligne* li, double vitesseMax, bool vite
         {
             n->suiv=c->suiv;
             c->suiv=n;
+        }
+    }
+}
+
+void listeTramways::supprimer(int numTram);
+{
+    if(d_tete=nullptr)
+    {
+        return;
+    }
+    else
+    {
+        tramway *c=d_tete;
+        if(c->num=numTram)
+        {
+            tramway *d=d_tete;
+            d_tete=d_tete->suiv;
+            delete d;
+        }
+        while(c>suiv!=nullptr && numTram>c->suiv->num)
+        {
+            c=c->suiv;
+        }
+        if(c->suiv!=nullptr)
+        {
+            tramway *d=c->suiv;
+            c->suiv=d->suiv;
+            delete d;
         }
     }
 }
