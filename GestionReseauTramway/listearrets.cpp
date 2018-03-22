@@ -55,7 +55,7 @@ void listeArrets::ajouter(std::string nom, int dureeArret, pos position)
             a = a->suiv;
         }
         prec->suiv = na;
-        na->suiv = c;
+        na->suiv = a;
     }
 }
 
@@ -81,7 +81,7 @@ void listeArrets::supprimer(std::string nom)
             if ( a != 0 )
             {
                 prec->suiv = a->suiv;
-                delete c;
+                delete a;
             }
         }
     }
