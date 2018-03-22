@@ -35,7 +35,7 @@ listeTramways::~listeTramways()
     while(t!=0)
     {
         d_tete=t->suiv;
-        delete t
+        delete t;
         t=d_tete;
     }
 }
