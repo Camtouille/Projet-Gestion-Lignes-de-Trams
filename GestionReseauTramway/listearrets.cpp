@@ -33,6 +33,31 @@ listeArrets::~listeArrets()
     }
 }
 
-void listeArrets::ajouter(std::string nom, int dureeArret, pos position);
+void listeArrets::ajouter(std::string nom, int dureeArret, pos position)
+{
+    arret *na = new arret(nom, durreArret, position);
+    if ( d_tete == 0 )
+    {
+        d_tete = na;
+    }
+    else if (strcmp( nom, d_tete->nom) < 0)
+    {
+        na->suiv = d_tete;
+        d_tete = na;
+    }
+    else
+    {
+        arret *prec = d_tete;
+        arret *a = d_tete->suiv;
+        while ( a != 0 && strcmp( a->nom, nom) < 0 )
+        {
+            prec = a;
+            a = a->suiv;
+        }
+        prec->suiv = na;
+        na->suiv = c;
+    }
+}
+
 void listeArrets::supprimer(std::string nom);
 arret* listeArrets::chercher(std::string nom) const;
