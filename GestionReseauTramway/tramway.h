@@ -6,7 +6,7 @@ class tramway
 {
     friend class listeTramways;
     public:
-        tramway(int num, ligne* li, double vitMax, bool vit, double distTram, double tArret, double distArret, bool sens, arret* arretSuivant);
+        tramway(int num, ligne* li, double vitMax, bool vit, double distTram, double tArret, double distArret, bool sens, arret* arretSuivant, arret* arretPrecedent);
         pos GetPosition() const;
     private:
         int d_numeroTram;
