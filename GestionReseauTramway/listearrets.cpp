@@ -63,7 +63,7 @@ void listeArrets::supprimer(std::string nom)
 {
     if ( d_tete != 0 )
     {
-        if ( strcmp( d_tete->nom, nom) = 0 )
+        if ( strcmp( d_tete->nom, nom) == 0 )
         {
             arret *tmp = d_tete;
             d_tete = d_tete->suiv;
