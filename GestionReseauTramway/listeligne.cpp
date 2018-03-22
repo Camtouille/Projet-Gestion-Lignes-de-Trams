@@ -13,6 +13,7 @@ listeligne::~listeligne()
         l = d_tete;
     }
 }
+
 listeligne::listeligne(const listeligne & liste)
 {
     if(liste.d_tete=nullptr)
@@ -27,7 +28,6 @@ listeligne::listeligne(const listeligne & liste)
         d_tete=n;
         c1=n;
         c2=c2->suiv;
-
         while(c2!=0)
         {
             n= new ligne(c2);
@@ -37,5 +37,6 @@ listeligne::listeligne(const listeligne & liste)
         }
     }
 }
+
 void listeligne::ajouter( listeArrets &la, listetramways &lt);
 void listeligne::supprimer( listearrets &la, listetramways &lt);
