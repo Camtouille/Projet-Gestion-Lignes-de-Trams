@@ -19,5 +19,8 @@ double tramway::distance(const tramway & a1, const tramway & a2)
 
 pos tramway::GetPosition() const
 {
-
+    pos p;
+    double d=d_distanceArret/distance(d_arretSuiv,d_arretPrec);
+    p.x=d_arretSuiv->pos.x*d+d_arretPrec->pos.x*(1-d);
+    p.y=d_arretSuiv->pos.y*d+d_arretPrec->pos.y*(1-d);
 }
