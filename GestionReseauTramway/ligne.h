@@ -6,6 +6,7 @@ class listeTramways;
 
 class ligne
 {
+	friend class listeligne;
 	public:
 		ligne();
 		ligne(const ligne & l);
