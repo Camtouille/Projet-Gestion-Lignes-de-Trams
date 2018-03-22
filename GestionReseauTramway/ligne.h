@@ -9,7 +9,7 @@ class ligne
 	public:
 		ligne();
 		ligne(const ligne & l);
-		arret* GetArret(int i);
+		std::vector<pos> GetPosArret();
 		void ajouterArret(std::string nom, int dureeArret, pos position);
 		void ajouterTram(int numTram, double vitesseMax, bool vitesse, double distanceMiniTram, double tempsArret, double distanceArret, bool sensDeplacement, const std::string nomProchainArret);
 		double distance(const arret & a1, const arret & a2);
