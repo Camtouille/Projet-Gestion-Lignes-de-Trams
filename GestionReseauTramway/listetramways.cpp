@@ -39,3 +39,30 @@ listeTramways::~listeTramways()
         t=d_tete;
     }
 }
+
+void listeTramways::ajouter(int numTram, ligne* li, double vitesseMax, bool vitesse, double distanceMiniTram, double tempsArret, double distanceArret, bool sensDeplacement, arret *arretSuivant);
+{
+    tramway *n= new tramway(numTram,li,vitessMax,vitesse,distanceMiniTram,tempsArrets,distanceArret,sensDeplacement,arretSuivant);
+    if(d_tete=nullptr)
+    {
+        d_tete=n;
+    }
+    else
+    {
+        tramway *c=d_tete;
+        while(c>suiv!=nullptr && numTram>c->num)
+        {
+            c=c->suiv;
+        }
+        if(c==nullptr)
+        {
+            c->suiv=n;
+            n->suiv=nullptr;
+        }
+        else
+        {
+            n->suiv=c->suiv;
+            c->suiv=n;
+        }
+    }
+}
