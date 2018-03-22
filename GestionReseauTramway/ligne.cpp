@@ -10,6 +10,10 @@ ligne::std::vector<pos> GetPosArret()
 {
     std::vector<pos> V; 
     arrets *c1=arrets.d_tete;
+    while(c1 != 0)
+    {
+        V.push_back(c1-> arrets.d_position);
+    }
     
 }
 
