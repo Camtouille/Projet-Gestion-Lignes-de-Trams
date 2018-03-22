@@ -15,3 +15,4 @@ listeligne::~listeligne()
 }
 
 void listeligne::ajouter( listeArrets &la, listetramways &lt);
+void listeligne::supprimer( listearrets &la, listetramways &lt);
