@@ -1,14 +1,10 @@
 #include "global.h"
 
 ligne::ligne():arrets{}, tramways{}
-{
-    //ctor
-}
+{}
 
 ligne::ligne(const ligne & l):arrets{l.arrets}, tramways{l.tramways}
-{
-    ///bonjour
-}
+{}
 void ligne::ajouterArret(std::string nom, int dureeArret, pos position)
 {
     arrets.ajouter(std::string nom, int dureeArret, pos position);
