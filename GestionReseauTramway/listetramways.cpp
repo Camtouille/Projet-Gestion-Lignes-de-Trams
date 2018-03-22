@@ -56,7 +56,7 @@ void listeTramways::ajouter(int numTram, ligne* li, double vitesseMax, bool vite
             n->suiv=c;
             d_tete=n;
         }
-        while(c->suiv!=nullptr && numTram>c->num)
+        while(c->suiv!=nullptr && numTram>c->suiv->num)
         {
             c=c->suiv;
         }
