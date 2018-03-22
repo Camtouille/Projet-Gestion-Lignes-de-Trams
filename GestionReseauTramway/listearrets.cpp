@@ -59,5 +59,32 @@ void listeArrets::ajouter(std::string nom, int dureeArret, pos position)
     }
 }
 
-void listeArrets::supprimer(std::string nom);
+void listeArrets::supprimer(std::string nom)
+{
+    if ( d_tete != 0 )
+    {
+        if ( strcmp( d_tete->nom, nom) = 0 )
+        {
+            arret *tmp = d_tete;
+            d_tete = d_tete->suiv;
+            delete tmp;
+        }
+        else
+        {
+            arret *prec = d_tete;
+            arret *a = d_tete->suiv;
+            while ( a != 0 && strcmp(a->nom, nom) < 0 )
+            {
+                prec = a;
+                a = a->suiv;
+            }
+            if ( a != 0 )
+            {
+                prec->suiv = a->suiv;
+                delete c;
+            }
+        }
+    }
+}
+
 arret* listeArrets::chercher(std::string nom) const;
