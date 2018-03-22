@@ -11,7 +11,7 @@ ligne::ligne(const ligne & l):arrets{l.arrets}, tramways{l.tramways}
 }
 void ligne::ajouterArret(std::string nom, int dureeArret, pos position)
 {
-    arret.ajouter(std::string nom, int dureeArret, pos position);
+    arrets.ajouter(std::string nom, int dureeArret, pos position);
 }
 void ligne::ajouterTram(int numTram, double vitesseMax, bool vitesse, double distanceMiniTram, double tempsArret, double distanceArret, bool sensDeplacement, const std::string nomProchainArret);
 
