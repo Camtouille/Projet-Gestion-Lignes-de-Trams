@@ -38,5 +38,24 @@ listeligne::listeligne(const listeligne & liste)
     }
 }
 
-void listeligne::ajouter( listeArrets &la, listetramways &lt);
-void listeligne::supprimer( listearrets &la, listetramways &lt);
+void listeligne::ajouter()
+{
+    ligne* l= new ligne{};
+    if(d_tete==0)
+    {
+        d_tete=l;
+    }
+    else
+    {
+        ligne *prec = d_tete;
+        ligne *l2 = d_tete->suiv;
+        while ( l2 != 0)
+        {
+            prec = l2;
+            l2 = l2->suiv;
+        }
+        prec->suiv = l;
+        l->suiv = l2;
+    }
+}
+
