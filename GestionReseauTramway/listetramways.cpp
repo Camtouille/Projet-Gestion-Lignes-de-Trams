@@ -51,14 +51,18 @@ void listeTramways::ajouter(int numTram, ligne* li, double vitesseMax, bool vite
     else
     {
         tramway *c=d_tete;
-        while(c>suiv!=nullptr && numTram>c->num)
+        if(c->num>numTram)
+        {
+            n->suiv=c;
+            d_tete=n;
+        }
+        while(c->suiv!=nullptr && numTram>c->num)
         {
             c=c->suiv;
         }
-        if(c==nullptr)
+        if(c->suiv==nullptr)
         {
             c->suiv=n;
-            n->suiv=nullptr;
         }
         else
         {
@@ -83,7 +87,7 @@ void listeTramways::supprimer(int numTram);
             d_tete=d_tete->suiv;
             delete d;
         }
-        while(c>suiv!=nullptr && numTram>c->suiv->num)
+        while(c->suiv!=nullptr && numTram>c->suiv->num)
         {
             c=c->suiv;
         }
