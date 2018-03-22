@@ -10,11 +10,6 @@ ligne::ligne(const ligne & l):arrets{l.arrets}, tramways{l.tramways}
     ///bonjour
 }
 
-/// listeArrets et ListeTramways s'occupe de la destruction?  -juj
-ligne::~ligne()
-{
-    //dtor
-}
 
 double ligne::distance(const arret & a1, const arret & a2)
 {
