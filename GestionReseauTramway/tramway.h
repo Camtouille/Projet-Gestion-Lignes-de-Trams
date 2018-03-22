@@ -14,10 +14,11 @@ class tramway
 		double d_vitesseMax;
 		bool d_vitesse;
 		double d_distanceMiniTram; ///distance minimale avec le tramway de devant
-		double d_tempsRestantArret; ///temps passé sur l'arrêt, -1.0 si il n'est pas sur un arrêt
-		double d_distanceArret; ///distance qui sépare le tramway du prochain arret
+		double d_tempsRestantArret; ///temps passÃ© sur l'arrÃªt, -1.0 si il n'est pas sur un arrÃªt
+		double d_distanceArret; ///distance qui sÃ©pare le tramway du prochain arret
 		bool d_sensDeplacement;
-		arret *d_arret;///prochain arret (si le tram est sur un arret, cet arret)
+		arret *d_arretSuiv;///prochain arret (si le tram est sur un arret, cet arret)
+		arret *d_arretPrec;
 		tramway *d_suiv;
 };
 
