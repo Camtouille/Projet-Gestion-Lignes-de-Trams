@@ -22,7 +22,17 @@ listeArrets::listeArrets(const listeArrets & l): d_tete{nullptr}
     }
 }
 
-listeArrets::~listeArrets();
+listeArrets::~listeArrets()
+{
+    arret *a = d_tete;
+    while (a != 0)
+    {
+        d_tete = a->d_suiv;
+        delete a;
+        a = d_tete;
+    }
+}
+
 void listeArrets::ajouter(std::string nom, int dureeArret, pos position);
 void listeArrets::supprimer(std::string nom);
 arret* listeArrets::chercher(std::string nom) const;
