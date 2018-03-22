@@ -88,7 +88,7 @@ void listeTramways::supprimer(int numTram);
             d_tete=d_tete->suiv;
             delete d;
         }
-        while(c->suiv!=nullptr && numTram>c->suiv->num)
+        while(c->suiv!=nullptr && numTram!=c->suiv->num)
         {
             c=c->suiv;
         }
