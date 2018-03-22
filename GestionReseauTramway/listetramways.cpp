@@ -20,11 +20,12 @@ listeTramways::listeTramways(const listeTramways & liste):d_tete{nullptr}
         c1=n;
         c2=c2->suiv;
 
-        while()
+        while(c2!=0)
         {
             n= new tramway(c2);
             c1->suiv=n;
             c2=c2->suiv;
+            c1=n;
         }
     }
 }
