@@ -24,7 +24,7 @@ listeligne::listeligne(const listeligne & liste)
     {
         ligne *c2=liste.d_tete;
         ligne *c1;
-        ligne *n= new tramway(c2);
+        ligne *n= new ligne(c2);
         d_tete=n;
         c1=n;
         c2=c2->suiv;
