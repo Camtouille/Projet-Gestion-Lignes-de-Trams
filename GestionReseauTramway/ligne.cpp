@@ -8,6 +8,7 @@ ligne::ligne(const ligne & l):arrets{l.arrets}, tramways{l.tramways}
 
 ligne::std::vector<pos> GetPosArret()
 {
+    std::vector<pos> V; 
 }
 
 void ligne::ajouterArret(std::string nom, int dureeArret, pos position)
