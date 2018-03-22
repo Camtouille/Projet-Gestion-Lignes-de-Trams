@@ -82,7 +82,7 @@ void listeTramways::supprimer(int numTram);
     else
     {
         tramway *c=d_tete;
-        if(c->num=numTram)
+        if(c->num==numTram)
         {
             tramway *d=d_tete;
             d_tete=d_tete->suiv;
