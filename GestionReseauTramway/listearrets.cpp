@@ -1,4 +1,5 @@
 #include "listearrets.h"
+#include <string.h>
 
 listeArrets::listeArrets(): d_tete{nullptr}
 {}
@@ -33,29 +34,29 @@ listeArrets::~listeArrets()
     }
 }
 
-void listeArrets::ajouter(std::string nom, int dureeArret, pos position)
+void listeArrets::ajouter(const std::string nom, int dureeArret, pos position)
 {
-    arret *na = new arret(nom, durreArret, position);
+    arret *na = new arret(nom, dureeArret, position);
     if ( d_tete == 0 )
     {
         d_tete = na;
     }
-    else if (strcmp( nom, d_tete->nom) < 0)
+    else if (strcmp(nom.c_str(), d_tete->d_nom.c_str()) < 0)
     {
-        na->suiv = d_tete;
+        na->d_suiv = d_tete;
         d_tete = na;
     }
     else
     {
         arret *prec = d_tete;
-        arret *a = d_tete->suiv;
-        while ( a != 0 && strcmp( a->nom, nom) < 0 )
+        arret *a = d_tete->d_suiv;
+        while ( a != 0 && strcmp(a->d_nom.c_str(), nom.c_str()) < 0 )
         {
             prec = a;
-            a = a->suiv;
+            a = a->d_suiv;
         }
-        prec->suiv = na;
-        na->suiv = a;
+        prec->d_suiv = na;
+        na->d_suiv = a;
     }
 }
 
@@ -63,28 +64,61 @@ void listeArrets::supprimer(std::string nom)
 {
     if ( d_tete != 0 )
     {
-        if ( strcmp( d_tete->nom, nom) == 0 )
+        if ( strcmp( d_tete->d_nom.c_str(), nom.c_str()) == 0 )
         {
             arret *tmp = d_tete;
-            d_tete = d_tete->suiv;
+            d_tete = d_tete->d_suiv;
             delete tmp;
         }
         else
         {
             arret *prec = d_tete;
-            arret *a = d_tete->suiv;
-            while ( a != 0 && strcmp(a->nom, nom) < 0 )
+            arret *a = d_tete->d_suiv;
+            while ( a != 0 && strcmp(a->d_nom.c_str(), nom.c_str()) < 0 )
             {
                 prec = a;
-                a = a->suiv;
+                a = a->d_suiv;
             }
             if ( a != 0 )
             {
-                prec->suiv = a->suiv;
+                prec->d_suiv = a->d_suiv;
                 delete a;
             }
         }
     }
 }
 
-arret* listeArrets::chercher(std::string nom) const;
+arret* listeArrets::chercher(std::string nom) const
+{
+    if(d_tete == 0)
+    {
+        return nullptr;
+    }
+    arret *c = d_tete;
+    while(c!=0 && strcmp(c->d_nom.c_str(), nom.c_str()) < 0)
+    {
+        c = c->d_suiv;
+    }
+    if(c == 0)
+    {
+        return nullptr;
+    }
+    if(strcmp(c->d_nom.c_str(), nom.c_str()) == 0)
+    {
+        return c;
+    }
+    return nullptr; ///Si on a pas trouvé l'arret
+}
+
+void listeArrets::afficher() const
+{
+    if(d_tete != 0)
+    {
+        arret *c = d_tete;
+        while(c != 0)
+        {
+            c->affiche();
+            c = c->d_suiv;
+        }
+    }
+}

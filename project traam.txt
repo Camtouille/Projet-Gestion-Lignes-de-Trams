@@ -17,6 +17,7 @@ tempsRestantArret
 distanceArret
 sensDeplacement
 nomDuProchainArret
+nomDeLarretPrecedent
 numtram
 vitesseMax
 vitesse
@@ -25,6 +26,7 @@ tempsRestantArret
 distanceArret
 sensDeplacement
 nomDuProchainArret
+nomDeLarretPrecedent
 
 nbDarrets
 nom
@@ -43,6 +45,7 @@ tempsRestantArret
 distanceArret
 sensDeplacement
 nomDuProchainArret
+nomDeLarretPrecedent
 numtram
 vitesseMax
 vitesse
@@ -51,3 +54,4 @@ tempsRestantArret
 distanceArret
 sensDeplacement
 nomDuProchainArret
+nomDeLarretPrecedent

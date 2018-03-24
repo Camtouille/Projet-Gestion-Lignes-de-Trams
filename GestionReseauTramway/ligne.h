@@ -1,8 +1,10 @@
 #ifndef LIGNE_H
 #define LIGNE_H
-class arret;
-class listeArrets;
-class listeTramways;
+#include <vector>
+#include <iostream>
+#include "global.h"
+#include "listearrets.h"
+#include "listetramways.h"
 
 class ligne
 {
@@ -12,11 +14,15 @@ class ligne
 		ligne(const ligne & l);
 		std::vector<pos> GetPosArret();
 		void ajouterArret(std::string nom, int dureeArret, pos position);
-		void ajouterTram(int numTram, double vitesseMax, bool vitesse, double distanceMiniTram, double tempsArret, double distanceArret, bool sensDeplacement, const std::string nomProchainArret);
-		
+		void ajouterTram(int numTram, double vitesseMax, bool vitesse, double distanceMiniTram, double tempsArret, double distanceArret, bool sensDeplacement, arret *arretSuivant, arret *arretPrecedent);
+		arret* chercherArret(std::string nom);
+		tramway* chercherTramway(int num);
+		void afficheArrets() const;
+
 	private:
 		listeArrets arrets;
 		listeTramways tramways;
+		ligne *d_suiv;
 };
 
 #endif // LIGNE_H

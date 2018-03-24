@@ -1,6 +1,6 @@
 #ifndef LISTELIGNE_H
 #define LISTELIGNE_H
-
+#include "ligne.h"
 
 class listeligne
 {

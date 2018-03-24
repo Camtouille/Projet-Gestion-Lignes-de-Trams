@@ -16,7 +16,7 @@ listeligne::~listeligne()
 
 listeligne::listeligne(const listeligne & liste)
 {
-    if(liste.d_tete=nullptr)
+    if(liste.d_tete == nullptr)
     {
         return;
     }
@@ -24,16 +24,16 @@ listeligne::listeligne(const listeligne & liste)
     {
         ligne *c2=liste.d_tete;
         ligne *c1;
-        ligne *n= new ligne(c2);
+        ligne *n= new ligne(*c2);
         d_tete=n;
         c1=n;
-        c2=c2->suiv;
+        c2=c2->d_suiv;
         while(c2!=0)
         {
-            n= new ligne(c2);
-            c1->suiv=n;
+            n= new ligne(*c2);
+            c1->d_suiv=n;
             c1=n;
-            c2=c2->suiv;
+            c2=c2->d_suiv;
         }
     }
 }
@@ -48,14 +48,14 @@ void listeligne::ajouter()
     else
     {
         ligne *prec = d_tete;
-        ligne *l2 = d_tete->suiv;
+        ligne *l2 = d_tete->d_suiv;
         while ( l2 != 0)
         {
             prec = l2;
-            l2 = l2->suiv;
+            l2 = l2->d_suiv;
         }
-        prec->suiv = l;
-        l->suiv = l2;
+        prec->d_suiv = l;
+        l->d_suiv = l2;
     }
 }
 
