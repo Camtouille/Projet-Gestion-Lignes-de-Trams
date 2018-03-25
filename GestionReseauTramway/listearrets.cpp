@@ -17,6 +17,7 @@ listeArrets::listeArrets(const listeArrets & l): d_tete{nullptr}
         {
             n = new arret(c2->d_nom, c2->d_dureeArret, c2->d_position);
             c1->d_suiv = n;
+            n->d_prec=c1;
             c1 = n;
             c2 = c2->d_suiv;
         }
@@ -49,6 +50,7 @@ void listeArrets::ajouter(const std::string nom, int dureeArret, pos position)
             c = c->d_suiv;
         }
         c->d_suiv = na;
+        na->d_prec = c;
     }
 }
 
@@ -60,6 +62,7 @@ void listeArrets::supprimer(std::string nom)
         {
             arret *tmp = d_tete;
             d_tete = d_tete->d_suiv;
+            d_tete->d_suiv->d_prec=0;
             delete tmp;
         }
         else
@@ -74,6 +77,7 @@ void listeArrets::supprimer(std::string nom)
             if ( a != 0 )
             {
                 prec->d_suiv = a->d_suiv;
+                a->d_suiv->d_prec=prec;
                 delete a;
             }
         }
@@ -129,3 +133,22 @@ std::vector<pos> listeArrets::CoordsArrets() const
     }
     return vect;
 }
+
+void listeArrets::afficherNomArrets() const
+{
+    if(d_tete!=0)
+    {
+        arret *c = d_tete;
+        while (c!=0)
+        {
+            std::cout<<c->d_nom<<" ";
+            c=c->d_suiv;
+        }
+    }
+}
+
+
+
+
+
+

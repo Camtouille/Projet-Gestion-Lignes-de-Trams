@@ -10,6 +10,8 @@ class listeligne
         listeligne(const listeligne & liste);
         ligne* ajouter();
         void affiche() const;
+        void rafraichir();
+        void afficherNomArrets() const;
 
     private:
         ligne *d_tete;

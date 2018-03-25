@@ -51,26 +51,13 @@ void listeTramways::ajouter(int numTram, ligne* li, double vitesseMax, bool vite
     }
     else
     {
-        tramway *c=d_tete;
-        if(c->d_numeroTram>numTram)
-        {
-            n->d_suiv=c;
-            d_tete=n;
-            return;
-        }
-        while(c->d_suiv!=nullptr && numTram>c->d_suiv->d_numeroTram)
+        tramway *c = d_tete;
+        while(c->d_suiv!=0)
         {
             c=c->d_suiv;
         }
-        if(c->d_suiv==nullptr)
-        {
-            c->d_suiv=n;
-        }
-        else
-        {
-            n->d_suiv=c->d_suiv;
-            c->d_suiv=n;
-        }
+        c->d_suiv=n;
+        n->d_prec=c;
     }
 }
 
@@ -88,6 +75,7 @@ void listeTramways::supprimer(int numTram)
             tramway *d=d_tete;
             d_tete=d_tete->d_suiv;
             delete d;
+            d_tete->d_prec=0;
         }
         while(c->d_suiv!=nullptr && numTram!=c->d_suiv->d_numeroTram)
         {
@@ -97,6 +85,7 @@ void listeTramways::supprimer(int numTram)
         {
             tramway *d=c->d_suiv;
             c->d_suiv=d->d_suiv;
+            d->d_suiv->d_prec=c;
             delete d;
         }
     }
@@ -109,7 +98,7 @@ tramway* listeTramways::chercher(int num) const
         return nullptr;
     }
     tramway *c = d_tete;
-    while(c != 0 && c->d_numeroTram < num)
+    while(c != 0 && c->d_numeroTram != num)
     {
         c = c->d_suiv;
     }
@@ -136,3 +125,41 @@ void listeTramways::affiche() const
         }
     }
 }
+
+void listeTramways::rafraichir()
+{
+    if(d_tete!=0)
+    {
+        tramway *c = d_tete;
+        while(c->d_suiv!=0)
+        {
+            c=c->d_suiv;
+        }
+        while(c!=0)
+        {
+            double dist=c->d_distanceArret-c->d_vitesseMax;
+            if(c->d_cmpt!=0 && dist<=0)
+            {
+                c->d_cmpt--;
+                c=c->d_prec;
+            }
+            else
+            {
+                c->avancer();
+                if(c->d_cmpt==0)
+                {
+                    c->d_cmpt=c->d_arretSuiv->d_dureeArret;
+                }
+                c=c->d_prec;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+

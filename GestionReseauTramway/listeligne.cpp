@@ -72,3 +72,31 @@ void listeligne::affiche() const
         }
     }
 }
+
+void listeligne::rafraichir()
+{
+    if(d_tete!=0)
+    {
+        ligne *c = d_tete;
+        while(c!=0)
+        {
+            c->tramways.rafraichir();
+            c=c->d_suiv;
+        }
+    }
+}
+
+ void listeligne::afficherNomArrets() const
+ {
+     if(d_tete!=0)
+     {
+         d_tete->arrets.afficherNomArrets();
+     }
+
+ }
+
+
+
+
+
+

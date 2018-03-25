@@ -5,6 +5,7 @@
 
 class arret
 {
+    friend class listeTramways;
     friend class listeArrets;
     friend class ligne;
     friend class tramway;
@@ -17,6 +18,7 @@ class arret
         int d_dureeArret;
         pos d_position;
         arret *d_suiv;
+        arret *d_prec;
 };
 
 #endif // ARRET_H

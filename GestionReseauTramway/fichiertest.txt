@@ -12,26 +12,42 @@ Tour_Nessel
 Porte_Haute
 5
 25 125
+
+2
 1
-1
-10.1
+2
 0
-1.5
+20
 5
 10
 0
 Daguerre
 Porte_Jeune
-2
+
+3
+2.5
+0
+20
+5
+10
+0
+Porte_Jeune
+Tour_Nessel
+
+3
 Bonne_Nouvelle
 5
-500 500
+20 150
 Balmora
 5
-560 520
+80 170
+Akihabara
+5
+160 170
+
 1
 2
-12.0
+1.5
 1
 2
 0

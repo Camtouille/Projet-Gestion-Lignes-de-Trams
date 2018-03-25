@@ -16,6 +16,7 @@ class listeArrets
 		arret* chercher(std::string nom) const;
 		void afficher() const;
 		std::vector<pos> CoordsArrets() const;
+		void afficherNomArrets() const;
 	private:
 		arret *d_tete;
 };

@@ -134,3 +134,72 @@
 	<cmath>
 	"graphics.h"
 
+1522005564 source:c:\users\julien\documents\projet\tramuniprojet\projet-gestion-lignes-de-trams-master\gestionreseautramway\arret.cpp
+	"arret.h"
+	"graphics.h"
+
+1522010529 c:\users\julien\documents\projet\tramuniprojet\projet-gestion-lignes-de-trams-master\gestionreseautramway\arret.h
+	<iostream>
+	"global.h"
+
+1521995649 c:\users\julien\documents\projet\tramuniprojet\projet-gestion-lignes-de-trams-master\gestionreseautramway\global.h
+
+1521995649 c:\users\julien\documents\projet\tramuniprojet\projet-gestion-lignes-de-trams-master\gestionreseautramway\graphics.h
+
+1521995649 source:c:\users\julien\documents\projet\tramuniprojet\projet-gestion-lignes-de-trams-master\gestionreseautramway\ligne.cpp
+	"ligne.h"
+	"arret.h"
+	<iostream>
+	<vector>
+	"graphics.h"
+
+1521995649 c:\users\julien\documents\projet\tramuniprojet\projet-gestion-lignes-de-trams-master\gestionreseautramway\ligne.h
+	<vector>
+	<iostream>
+	"global.h"
+	"listearrets.h"
+	"listetramways.h"
+
+1522004227 c:\users\julien\documents\projet\tramuniprojet\projet-gestion-lignes-de-trams-master\gestionreseautramway\listearrets.h
+	"arret.h"
+	<vector>
+
+1521998074 c:\users\julien\documents\projet\tramuniprojet\projet-gestion-lignes-de-trams-master\gestionreseautramway\listetramways.h
+	"tramway.h"
+
+1522009366 c:\users\julien\documents\projet\tramuniprojet\projet-gestion-lignes-de-trams-master\gestionreseautramway\tramway.h
+	"arret.h"
+
+1522005776 source:c:\users\julien\documents\projet\tramuniprojet\projet-gestion-lignes-de-trams-master\gestionreseautramway\listearrets.cpp
+	"listearrets.h"
+	<string.h>
+
+1522004382 source:c:\users\julien\documents\projet\tramuniprojet\projet-gestion-lignes-de-trams-master\gestionreseautramway\listeligne.cpp
+	"listeligne.h"
+
+1522004382 c:\users\julien\documents\projet\tramuniprojet\projet-gestion-lignes-de-trams-master\gestionreseautramway\listeligne.h
+	"ligne.h"
+
+1522013055 source:c:\users\julien\documents\projet\tramuniprojet\projet-gestion-lignes-de-trams-master\gestionreseautramway\main.cpp
+	"ligne.h"
+	<fstream>
+	<windows.h>
+	"graphics.h"
+	"listeligne.h"
+
+1521995649 source:c:\users\julien\documents\projet\tramuniprojet\projet-gestion-lignes-de-trams-master\gestionreseautramway\winbgi.cpp
+	<windows.h>
+	<stddef.h>
+	<stdio.h>
+	<math.h>
+	"graphics.h"
+
+1522013162 source:c:\users\julien\documents\projet\tramuniprojet\projet-gestion-lignes-de-trams-master\gestionreseautramway\tramway.cpp
+	"tramway.h"
+	<cmath>
+	"graphics.h"
+
+1522011769 source:c:\users\julien\documents\projet\tramuniprojet\projet-gestion-lignes-de-trams-master\gestionreseautramway\listetramways.cpp
+	"listetramways.h"
+	"tramway.h"
+

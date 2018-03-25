@@ -14,6 +14,7 @@ class tramway
         double distance(const tramway & t1, const tramway & t2) const;
         void GetPosition(pos & p) const;
         void affiche() const;
+        void avancer();
 
     private:
         int d_numeroTram;
@@ -27,6 +28,10 @@ class tramway
 		arret *d_arretSuiv;///prochain arret (si le tram est sur un arret, cet arret)
 		arret *d_arretPrec;
 		tramway *d_suiv;
+		tramway *d_prec;
+		int d_cmpt;
+		bool d_inPause;
+		bool d_change;
 };
 
 #endif // TRAMWAY_H

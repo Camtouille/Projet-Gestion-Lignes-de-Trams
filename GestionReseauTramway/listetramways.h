@@ -12,6 +12,7 @@ class listeTramways ///liste des tramways triés par numéro de tramway
 		void supprimer(int num);
 		tramway* chercher(int num) const;
 		void affiche() const;
+		void rafraichir();
 	private:
 		tramway *d_tete;
 };

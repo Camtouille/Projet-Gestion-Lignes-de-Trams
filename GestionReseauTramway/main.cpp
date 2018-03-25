@@ -1,5 +1,6 @@
 #include "ligne.h"
 #include <fstream>
+#include <windows.h>
 #include "graphics.h"
 #include "listeligne.h"
 
@@ -62,10 +63,25 @@ int main()
 {
     listeligne l;
     chargerLignes(l, "fichiertest.txt");
+
+    int cpt=0;
+    std::cout << "Donner le temps de simulation souhaite (secondes):";
+    std::cin >> cpt;
     opengraphsize(1000, 700);
     setbkcolor(LIGHTGRAY);
     cleardevice();
     l.affiche();
+
+    while(cpt!=0)
+    {
+        l.rafraichir();
+        setbkcolor(LIGHTGRAY);
+        cleardevice();
+        l.affiche();
+        Sleep(100);
+        cpt--;
+    }
+
     getch();
     closegraph();
 }
