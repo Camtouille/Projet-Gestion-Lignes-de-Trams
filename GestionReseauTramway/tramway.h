@@ -12,7 +12,9 @@ class tramway
         double distance(const arret & a1, const arret & a2) const;
         double distance(const tramway & t1, const arret & a2) const;
         double distance(const tramway & t1, const tramway & t2) const;
-        pos GetPosition() const;
+        void GetPosition(pos & p) const;
+        void affiche() const;
+
     private:
         int d_numeroTram;
 		ligne *d_ligne; ///ligne sur laquelle roule le tramway

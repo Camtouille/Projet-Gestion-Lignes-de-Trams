@@ -66,3 +66,71 @@
 	<math.h>
 	"graphics.h"
 
+1521994675 source:c:\users\camtouille\documents\projet-gestion-lignes-de-trams-master_backup\gestionreseautramway\arret.cpp
+	"arret.h"
+	"graphics.h"
+
+1521983990 c:\users\camtouille\documents\projet-gestion-lignes-de-trams-master_backup\gestionreseautramway\arret.h
+	<iostream>
+	"global.h"
+
+1521879970 c:\users\camtouille\documents\projet-gestion-lignes-de-trams-master_backup\gestionreseautramway\global.h
+
+1521879970 c:\users\camtouille\documents\projet-gestion-lignes-de-trams-master_backup\gestionreseautramway\graphics.h
+
+1521986941 source:c:\users\camtouille\documents\projet-gestion-lignes-de-trams-master_backup\gestionreseautramway\listearrets.cpp
+	"listearrets.h"
+	<string.h>
+
+1521986051 c:\users\camtouille\documents\projet-gestion-lignes-de-trams-master_backup\gestionreseautramway\listearrets.h
+	"arret.h"
+	<vector>
+
+1521987486 source:c:\users\camtouille\documents\projet-gestion-lignes-de-trams-master_backup\gestionreseautramway\listeligne.cpp
+	"listeligne.h"
+
+1521987372 c:\users\camtouille\documents\projet-gestion-lignes-de-trams-master_backup\gestionreseautramway\listeligne.h
+	"ligne.h"
+
+1521992895 c:\users\camtouille\documents\projet-gestion-lignes-de-trams-master_backup\gestionreseautramway\ligne.h
+	<vector>
+	<iostream>
+	"global.h"
+	"listearrets.h"
+	"listetramways.h"
+
+1521992408 c:\users\camtouille\documents\projet-gestion-lignes-de-trams-master_backup\gestionreseautramway\listetramways.h
+	"tramway.h"
+
+1521994247 c:\users\camtouille\documents\projet-gestion-lignes-de-trams-master_backup\gestionreseautramway\tramway.h
+	"arret.h"
+
+1521994516 source:c:\users\camtouille\documents\projet-gestion-lignes-de-trams-master_backup\gestionreseautramway\main.cpp
+	"ligne.h"
+	<fstream>
+	"graphics.h"
+	"listeligne.h"
+
+1521879970 source:c:\users\camtouille\documents\projet-gestion-lignes-de-trams-master_backup\gestionreseautramway\winbgi.cpp
+	<windows.h>
+	<stddef.h>
+	<stdio.h>
+	<math.h>
+	"graphics.h"
+
+1521994829 source:c:\users\camtouille\documents\projet-gestion-lignes-de-trams-master_backup\gestionreseautramway\ligne.cpp
+	"ligne.h"
+	"arret.h"
+	<iostream>
+	<vector>
+	"graphics.h"
+
+1521992408 source:c:\users\camtouille\documents\projet-gestion-lignes-de-trams-master_backup\gestionreseautramway\listetramways.cpp
+	"listetramways.h"
+	"tramway.h"
+
+1521995032 source:c:\users\camtouille\documents\projet-gestion-lignes-de-trams-master_backup\gestionreseautramway\tramway.cpp
+	"tramway.h"
+	<cmath>
+	"graphics.h"
+

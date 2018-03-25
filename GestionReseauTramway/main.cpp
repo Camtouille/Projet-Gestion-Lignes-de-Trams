@@ -62,8 +62,8 @@ int main()
 {
     listeligne l;
     chargerLignes(l, "fichiertest.txt");
-    opengraphsize(1000, 500);
-    setbkcolor(WHITE);
+    opengraphsize(1000, 700);
+    setbkcolor(LIGHTGRAY);
     cleardevice();
     l.affiche();
     getch();

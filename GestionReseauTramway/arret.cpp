@@ -11,7 +11,7 @@ void arret::affiche() const
 {
     ///std::cout << "J'affiche l'arret :)\n";
     setcolor(BLUE);
-    bar(d_position.x-4, d_position.y-4, d_position.x+4, d_position.y+4);
+    bar(d_position.x-5, d_position.y-5, d_position.x+5, d_position.y+5);
 }
 
 void arret::afficheCoord() const

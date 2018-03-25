@@ -123,3 +123,16 @@ tramway* listeTramways::chercher(int num) const
     }
     return nullptr;
 }
+
+void listeTramways::affiche() const
+{
+    if(d_tete != 0)
+    {
+        tramway *c = d_tete;
+        while(c != 0)
+        {
+            c->affiche();
+            c = c->d_suiv;
+        }
+    }
+}

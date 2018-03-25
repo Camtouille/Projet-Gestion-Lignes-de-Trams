@@ -45,14 +45,19 @@ void ligne::afficheArrets() const
 {
     arrets.afficher();
 }
+void ligne::afficheTramways() const
+{
+    tramways.affiche();
+}
 
 void ligne::affiche() const
 {
-    afficheArrets();
     std::vector<pos> p = arrets.CoordsArrets();
     for(int i = 1 ; i<p.size() ; i++)
     {
-        setcolor(BLUE);
+        setcolor(LIGHTMAGENTA);
         line(p[i-1].x, p[i-1].y, p[i].x, p[i].y);
     }
+    afficheArrets();
+    afficheTramways();
 }
