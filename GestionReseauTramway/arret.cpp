@@ -9,6 +9,12 @@ arret::arret(const std::string & nom, int dureeArret, const pos & position): d_n
 
 void arret::affiche() const
 {
-    setcolor(BLACK);
-    rectangle(d_position.x-2, d_position.y-2, d_position.x+2, d_position.y+2);
+    ///std::cout << "J'affiche l'arret :)\n";
+    setcolor(BLUE);
+    bar(d_position.x-4, d_position.y-4, d_position.x+4, d_position.y+4);
+}
+
+void arret::afficheCoord() const
+{
+    std::cout << d_position.x << ", " << d_position.y << std::endl;
 }

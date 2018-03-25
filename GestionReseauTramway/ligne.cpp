@@ -1,10 +1,13 @@
 #include "ligne.h"
 #include "arret.h"
+#include <iostream>
+#include <vector>
+#include "graphics.h"
 
-ligne::ligne():arrets{}, tramways{}
+ligne::ligne():arrets{}, tramways{}, d_suiv{0}
 {}
 
-ligne::ligne(const ligne & l):arrets{l.arrets}, tramways{l.tramways}
+ligne::ligne(const ligne & l):arrets{l.arrets}, tramways{l.tramways}, d_suiv{0}
 {}
 
 std::vector<pos> ligne::GetPosArret()
@@ -41,4 +44,15 @@ tramway* ligne::chercherTramway(int num)
 void ligne::afficheArrets() const
 {
     arrets.afficher();
+}
+
+void ligne::affiche() const
+{
+    afficheArrets();
+    std::vector<pos> p = arrets.CoordsArrets();
+    for(int i = 1 ; i<p.size() ; i++)
+    {
+        setcolor(BLUE);
+        line(p[i-1].x, p[i-1].y, p[i].x, p[i].y);
+    }
 }

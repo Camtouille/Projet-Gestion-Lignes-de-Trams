@@ -18,6 +18,7 @@ class ligne
 		arret* chercherArret(std::string nom);
 		tramway* chercherTramway(int num);
 		void afficheArrets() const;
+		void affiche() const;
 
 	private:
 		listeArrets arrets;

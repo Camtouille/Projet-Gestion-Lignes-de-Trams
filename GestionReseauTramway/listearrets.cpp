@@ -41,22 +41,14 @@ void listeArrets::ajouter(const std::string nom, int dureeArret, pos position)
     {
         d_tete = na;
     }
-    else if (strcmp(nom.c_str(), d_tete->d_nom.c_str()) < 0)
-    {
-        na->d_suiv = d_tete;
-        d_tete = na;
-    }
     else
     {
-        arret *prec = d_tete;
-        arret *a = d_tete->d_suiv;
-        while ( a != 0 && strcmp(a->d_nom.c_str(), nom.c_str()) < 0 )
+        arret *c = d_tete;
+        while(c->d_suiv != 0)
         {
-            prec = a;
-            a = a->d_suiv;
+            c = c->d_suiv;
         }
-        prec->d_suiv = na;
-        na->d_suiv = a;
+        c->d_suiv = na;
     }
 }
 
@@ -74,7 +66,7 @@ void listeArrets::supprimer(std::string nom)
         {
             arret *prec = d_tete;
             arret *a = d_tete->d_suiv;
-            while ( a != 0 && strcmp(a->d_nom.c_str(), nom.c_str()) < 0 )
+            while ( a != 0 && strcmp(a->d_nom.c_str(), nom.c_str()) != 0 )
             {
                 prec = a;
                 a = a->d_suiv;
@@ -95,7 +87,7 @@ arret* listeArrets::chercher(std::string nom) const
         return nullptr;
     }
     arret *c = d_tete;
-    while(c!=0 && strcmp(c->d_nom.c_str(), nom.c_str()) < 0)
+    while(c!=0 && strcmp(c->d_nom.c_str(), nom.c_str()) != 0)
     {
         c = c->d_suiv;
     }
@@ -121,4 +113,19 @@ void listeArrets::afficher() const
             c = c->d_suiv;
         }
     }
+}
+
+std::vector<pos> listeArrets::CoordsArrets() const
+{
+    std::vector<pos> vect;
+    if(d_tete != 0)
+    {
+        arret *c = d_tete;
+        while(c != 0)
+        {
+            vect.push_back(c->d_position);
+            c = c->d_suiv;
+        }
+    }
+    return vect;
 }

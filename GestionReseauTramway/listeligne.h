@@ -8,7 +8,8 @@ class listeligne
         listeligne();
         ~listeligne();
         listeligne(const listeligne & liste);
-        void ajouter();
+        ligne* ajouter();
+        void affiche() const;
 
     private:
         ligne *d_tete;

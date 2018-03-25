@@ -11,6 +11,7 @@ class arret
     public:
         arret(const std::string & nom, int dureeArret, const pos & position);
         void affiche() const;
+        void afficheCoord() const;
     private:
         std::string d_nom;
         int d_dureeArret;

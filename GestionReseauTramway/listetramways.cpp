@@ -45,7 +45,7 @@ listeTramways::~listeTramways()
 void listeTramways::ajouter(int numTram, ligne* li, double vitesseMax, bool vitesse, double distanceMiniTram, double tempsArret, double distanceArret, bool sensDeplacement, arret *arretSuivant, arret *arretPrecedent)
 {
     tramway *n= new tramway(numTram,li,vitesseMax,vitesse,distanceMiniTram,tempsArret,distanceArret,sensDeplacement,arretSuivant,arretPrecedent);
-    if(d_tete=nullptr)
+    if(d_tete==nullptr)
     {
         d_tete=n;
     }
@@ -76,7 +76,7 @@ void listeTramways::ajouter(int numTram, ligne* li, double vitesseMax, bool vite
 
 void listeTramways::supprimer(int numTram)
 {
-    if(d_tete=nullptr)
+    if(d_tete==nullptr)
     {
         return;
     }

@@ -38,7 +38,7 @@ listeligne::listeligne(const listeligne & liste)
     }
 }
 
-void listeligne::ajouter()
+ligne* listeligne::ajouter()
 {
     ligne* l= new ligne{};
     if(d_tete==0)
@@ -57,5 +57,18 @@ void listeligne::ajouter()
         prec->d_suiv = l;
         l->d_suiv = l2;
     }
+    return l;
 }
 
+void listeligne::affiche() const
+{
+    if(d_tete != 0)
+    {
+        ligne *c = d_tete;
+        while(c != 0)
+        {
+            c->affiche();
+            c = c->d_suiv;
+        }
+    }
+}

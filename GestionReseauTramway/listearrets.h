@@ -1,9 +1,10 @@
 #ifndef LISTEARRETS_H
 #define LISTEARRETS_H
 #include "arret.h"
+#include <vector>
 
 
-class listeArrets ///liste des arrêts triés par ordre alphabétique
+class listeArrets
 {
     friend class ligne;
 	public:
@@ -14,6 +15,7 @@ class listeArrets ///liste des arrêts triés par ordre alphabétique
 		void supprimer(std::string nom);
 		arret* chercher(std::string nom) const;
 		void afficher() const;
+		std::vector<pos> CoordsArrets() const;
 	private:
 		arret *d_tete;
 };
